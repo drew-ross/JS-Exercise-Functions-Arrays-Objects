@@ -12,7 +12,7 @@
  *
  * NOTE: This example has been completed for you.
 */
-function addNumbers(num1, num2) {
+const addNumbers = (num1, num2) => {
   return num1 + num2;
 }
 
@@ -35,7 +35,7 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(name) {
+const sayGoodbye = (name) => {
   return `Goodbye, ${name}. Have a great day.`
 }
 
@@ -53,7 +53,7 @@ function sayGoodbye(name) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(celsius) {
+const temperatureCtoF = (celsius) => {
   return Math.round(celsius * 9 / 5 + 32);
 }
 
@@ -74,7 +74,7 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(temperature, unit) {
+const temperatureInF = (temperature, unit) => {
   if (unit === 'F') {
     return Math.round(temperature) + 'F'
   } else {
@@ -99,12 +99,8 @@ function temperatureInF(temperature, unit) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id, name, email) {
-  return {
-    id: id,
-    name: name,
-    email: email
-  }
+const makePersonObject = (id, name, email) => {
+  return {id, name, email}
 }
 
 /**
@@ -120,7 +116,7 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(obj) {
+const getName = (obj) => {
   return `Hello, my name is ${obj.name}`;
 }
 
@@ -140,7 +136,7 @@ function getName(obj) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(arr) {
+const appleIndex = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === "apple") {
       return i;
@@ -163,7 +159,7 @@ function appleIndex(arr) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(arr) {
+const isItAnApple = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     result.push(arr[i] === "apple");
@@ -225,7 +221,7 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
+const getCarInfoByIndex = (inventory, index) => {
   return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
   
 }
@@ -241,7 +237,7 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(arr) {
+const getLastCarInfo = (arr) => {
   let index = arr.length - 1;
   return `This is a ${arr[index].car_make} ${arr[index].car_model}`;
 }
@@ -255,7 +251,7 @@ function getLastCarInfo(arr) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(inventory) {
+const getModelYears = (inventory) => {
   let years = [];
   for (let i = 0; i < inventory.length; i++) {
     years.push(inventory[i].car_year);
